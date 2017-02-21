@@ -1,0 +1,162 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercises 1-5</title>
+    <style>
+        * {
+            cursor: url('goodcursor.png') 4 4, auto;
+        }
+        body {
+            background: url("Green-Marble-smaller.jpg");
+            font-family: Tahoma, sans-serif;
+        }
+        p {
+            font-family: "Times new roman", serif;
+            color: blue;
+        }
+        label {
+            clear: both;
+            text-decoration: underline;
+            font-size: 60%;
+        }
+        #mainTable {
+            background: white;
+            min-height: 500px;
+            -webkit-clip-path: polygon(40px 0, calc(100% - 40px) 0,
+                                       100% 40px, 100% calc(100% - 40px),
+                                       calc(100% - 40px) 100%, 40px 100%,
+                                       0 calc(100% - 40px), 0 40px);
+            clip-path: polygon(40px 0, calc(100% - 40px) 0,
+                                       100% 40px, 100% calc(100% - 40px),
+                                       calc(100% - 40px) 100%, 40px 100%,
+                                       0 calc(100% - 40px), 0 40px);
+        }
+        #menuCell, #adsCell {
+            min-width: 150px;
+        }
+        #menuCell, #bodyCell {
+            vertical-align: top;
+        }
+        #bodyCell {
+            min-width: 350px;
+            height: 100%;
+        }
+        #identityTheftForm {
+            text-align: center;
+            /*margin-right: 30%;*/
+        }
+        label, .inputField {
+            box-sizing: border-box;
+            width: 200px;
+        }
+        #menuCell {
+            background: #300;
+            font-family: courier;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+        #menuCell:hover {
+            background: yellow;
+        }
+        #menuCell a {
+            margin: 20px;
+            display: inline-block;
+            -webkit-transition: all 0.8s ease;
+            transition: all 0.8s ease;
+        }
+        #menuCell a:hover {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+            color: red;
+            font-size: 120%;
+            font-weight: bold;
+        }
+        #headerCell, #footerCell {
+            text-align: center;
+        }
+        #headerCell {
+            background: radial-gradient(ellipse at 50% 50%, yellow 0%, red 100%);
+            color: magenta;
+            font-family: "Comic Sans MS";
+            font-size: 300%;
+            font-weight: bold;
+        }
+        #footerCell {
+            background: url("parchment.jpg");
+            padding: 10px;
+            font-family: "Lucida handwriting";
+            font-style: italic;
+        }
+        @-webkit-keyframes moving {
+            0% {-webkit-transform: translateX(-100px);}
+            50% {-webkit-transform: translateX(100px);}
+            100% {-webkit-transform: translateX(-100px);}
+        }
+        @keyframes moving {
+            0% {-webkit-transform: translateX(-100px);}
+            50% {-webkit-transform: translateX(100px);}
+            100% {-webkit-transform: translateX(-100px);}
+        }
+        #adsCell {
+            background: #060;
+        }
+        #adsCell img {
+            width: 100%;
+            height: 500px;
+        }
+        #adsCell h2 {
+            color: yellow;
+            -webkit-filter: drop-shadow(0px 10px 5px black);
+            filter: drop-shadow(0px 10px 5px black);
+            font-family: Impact;
+            font-size: 300%;
+            font-style: italic;
+            text-align: center;
+            text-decoration: underline;
+            -webkit-animation: moving 2s linear infinite;
+            animation: moving 2s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <table id="mainTable" border="1">
+        <tr>
+            <td id="headerCell" colspan="3">Header</td>
+        </tr>
+        <tr>
+            <td id="menuCell">
+                <a href="#target1">Menu 1</a><br/>
+                <a href="#target2">Menu 2</a><br/>
+                <a href="#target3">Menu 3</a><br/>
+                <a href="#target4">Menu 4</a>
+            </td>
+            <td id="bodyCell">
+                <h1>W</h1><h2>e</h2><h3>l</h3><h4>c</h4><h5>o</h5><h6>m</h6>
+                <p>htmling like its 1997</p>
+                <p>
+                    <a href="3-image.png"><img src="3-image.png" width="200" height="300" alt="please stop youre scaring me" /></a>
+                    &lt;------ click here pls
+                </p>
+                <hr />
+                <p>
+                    <strong>please write your personal information in my <strike>identity theft collector</strike> guestbook :)</strong>
+                </p>
+                <form action="fail404.php" method="get" id="identityTheftForm">
+                    <label>First name: </label><input class="inputField" type="text"/><br/>
+                    <label>Last name: </label><input class="inputField" type="text"/><br/>
+                    <label>Date of birth: </label><input class="inputField" type="date"/><br/>
+                    <input type="submit" value="Send"/>
+                </form>
+            </td>
+            <td id="adsCell">
+                <h2>Ads</h2>
+                <a href="#ad1"><img src="7-ad1.png" alt="buy buy buy"/></a>
+            </td>
+        </tr>
+        <tr>
+            <td id="footerCell" colspan="3">Footer</td>
+        </tr>
+    </table>
+</body>
+</html>
